@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Freelance practice</title>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            header {
+                width: 100%;
+                padding: 30px;
+                background-color: black;
+                display: flex;
+                align-items: center;
+                justify-content: center;                
+            }
+            .text {
+                font-size: 36px;
+                color: white;
+            }
+            .biography {
+                position: relative;   
+                height: 100%;
+                width: 100%;
+                z-index: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            body::after {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                content: "";
+                background: linear-gradient(
+                    120deg,
+                    pink,
+                    lightblue,
+                    lightgreen                            
+                                   
+                );
+            }
+            .mybiography {
+                padding: 10px;
+                background-color: #ffffff;
+                border-radius: 5px;
+                margin-top: 60px;
+                max-width: 800px;
+            }
+            .aboutme {
+                font-size: 26px;
+                color: black;
+                opacity: 1;
+            }
+            button {
+                padding: 20px;
+                background-color: red;
+                color: white;
+                font-size: 24px;
+                border-radius: 5px;
+                border: 2px solid red;
+                position: absolute;
+                left: 950px;
+                top: 450px; 
+                transition: 0.3s ease; 
+
+            }
+            button:hover {
+                transform: scale(1.05);
+                cursor: pointer;
+            }
+            footer {
+                position: absolute;
+                top: 690px;
+                right: 50px;
+                color: blue;
+                font-size: 20px;
+                transition: 0.2s ease;
+            }
+            footer:hover {
+                cursor: pointer;
+                text-decoration: underline;
+            }
+            
+        </style>
+    </head>
+    <body>
+        
+        <div class="biography">
+            <header>
+                <p class="text">Ганджибеков Рамазон</p>
+            </header>
+            <div class="mybiography">
+                <p class="aboutme">Меня зовут Ганджибеков Рамазон. Я активно изучаю программирование и сейчас могу делать веб-сайты с помощью HTML, CSS и JavaScript. Я практикуюсь здесь и надеюсь, что скоро всё будет отлично!</p>
+            </div>
+            <button id="btn">Подписаться</button>
+            
+            <footer>Contacts: ramaz2012@gmail.com</footer>
+
+        </div>
+        <script
+        >
+            const btn = document.getElementById("btn")
+            btn.addEventListener("click", () => {
+                btn.innerText = "Вы подписаны!"
+                btn.style.backgroundColor = 'gold';
+                btn.style.border = '2px solid gold'
+            })
+        </script>
+
+    </body>
+</html>
